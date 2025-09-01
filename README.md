@@ -19,12 +19,12 @@ Steps:
 ```bash
   doDebian()
 {{
-\#\#\# AIE Tools prerequisite libraries
+### AIE Tools prerequisite libraries
    apt-get update | tee -a $logFile
    apt-get install -y libc6-dev-i386 net-tools | tee -a $logFile
    apt-get install -y graphviz | tee -a $logFile
    apt-get install -y make | tee -a $logFile
-\#\#\# Vitis Tools prerequisite libraries
+### Vitis Tools prerequisite libraries
    apt-get install -y unzip | tee -a $logFile
    apt-get install -y zip | tee -a $logFile
    apt-get install -y g++ | tee -a $logFile
@@ -46,12 +46,12 @@ Steps:
 ```
 - execute
 ```bash
-./installLibsDebian.sh
+sudo ./installLibsDebian.sh
 ```
-- if your system doesn't have utf-8 en locale install it as [shown](https://serverfault.com/questions/54591/how-to-install-change-locale-on-debian)
-- ```bash
+- if your system doesn't have `UTF-8 EN US` locale install it as [shown](https://serverfault.com/questions/54591/how-to-install-change-locale-on-debian)
+```bash
   sudo apt install locales-all
-  ```
+```
 - If libtinfo5 is missing, manually install it by downloading .deb file [as shown](https://askubuntu.com/questions/1531760/how-to-install-libtinfo5-on-ubuntu24-04)
 - Do the same for other missing libraries if they are not on official repository and
   ensure there are no binary/package conflicts, otherwise your system will be rendered unusable.
