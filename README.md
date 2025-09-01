@@ -19,12 +19,12 @@ Steps:
 - ```bash
   doDebian()
 {
-### AIE Tools prerequisite libraries
+
    apt-get update | tee -a $logFile
    apt-get install -y libc6-dev-i386 net-tools | tee -a $logFile
    apt-get install -y graphviz | tee -a $logFile
    apt-get install -y make | tee -a $logFile
-### Vitis Tools prerequisite libraries
+
    apt-get install -y unzip | tee -a $logFile
    apt-get install -y zip | tee -a $logFile
    apt-get install -y g++ | tee -a $logFile
@@ -42,7 +42,6 @@ Steps:
    apt-get install -y compat-openssl10  | tee -a $logFile
    apt-get install -y fdisk  | tee -a $logFile
    apt-get install -y  libsecret-1-dev | tee -a $logFile
-
 }
 ```
 - execute ```bash
