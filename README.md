@@ -17,7 +17,7 @@ Steps:
   ```
 - and also create the function in the same file installLibsDebian.sh in appropriate location with similar functions
 - ```bash
-  doDebian()
+  doDebian\(\)
 \{
 \### AIE Tools prerequisite libraries
    apt-get update | tee -a $logFile
