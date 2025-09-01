@@ -18,13 +18,13 @@ Steps:
 - and also create the function in the same file installLibsDebian.sh in appropriate location with similar functions
 - ```bash
   doDebian()
-{
-
+\{
+\### AIE Tools prerequisite libraries
    apt-get update | tee -a $logFile
    apt-get install -y libc6-dev-i386 net-tools | tee -a $logFile
    apt-get install -y graphviz | tee -a $logFile
    apt-get install -y make | tee -a $logFile
-
+\### Vitis Tools prerequisite libraries
    apt-get install -y unzip | tee -a $logFile
    apt-get install -y zip | tee -a $logFile
    apt-get install -y g++ | tee -a $logFile
@@ -42,7 +42,7 @@ Steps:
    apt-get install -y compat-openssl10  | tee -a $logFile
    apt-get install -y fdisk  | tee -a $logFile
    apt-get install -y  libsecret-1-dev | tee -a $logFile
-}
+\}
 ```
 - execute ```bash
 ./installLibsDebian.sh
@@ -52,6 +52,7 @@ Steps:
   sudo apt install locales-all
   ```
 - If libtinfo5 is missing, manually install it by downloading .deb file [as shown](https://askubuntu.com/questions/1531760/how-to-install-libtinfo5-on-ubuntu24-04)
-- Do the same for other missing libraries not on official repository and
+- Do the same for other missing libraries if they are not on official repository and
   ensure there are no binary/package conflicts, otherwise your system will be rendered unusable.
 - Inspect the logs of the install script for other possible issues.
+- You might also have to create symlinks to some libraries, relevant information can be looked up on Xilinx Support Website.
